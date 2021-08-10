@@ -33,12 +33,15 @@ class ViewController: UIViewController {
         super .viewDidAppear(animated)
         
         
-        func buttonAction(button: UIButton!) {
-            let buttonCoordinate: UIButton = button
-            if buttonCoordinate.tag == 1 {
-                dismiss(animated: true, completion: nil)
-            }
-        }
+//        func buttonAction(button: UIButton!) {
+//            let buttonCoordinate: UIButton = button
+//            if buttonCoordinate.tag == 1 {
+//                dismiss(animated: true, completion: nil)
+//            }
+//        }
+        
+        button.addTarget(self, action: #selector(touchesBegan) , for: .touchUpInside)
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
